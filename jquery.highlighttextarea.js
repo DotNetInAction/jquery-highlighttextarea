@@ -185,6 +185,10 @@
             'input.highlighter': Utilities.throttle(function() {
                 this.highlight();
             }, 100, this),
+            
+             'keyup.highlighter': $.proxy(function (e) {
+                this.highlight(true);
+            }, this),
 
             'resize.highlighter': Utilities.throttle(function() {
                 this.updateSizePosition(true);
